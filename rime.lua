@@ -1,11 +1,12 @@
 function date_translator(input, seg)
    if (input == "date") then
       --- Candidate(type, start, end, text, comment)
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y-%m-%d"), ""))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m-%d"), ""))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y年%m月%d日"), ""))
-      yield(Candidate("date", seg.start, seg._end, os.date("%m-%d-%Y"), ""))
-      yield(Candidate("date", seg.start, seg._end, os.date("%Y/%m/%d"), ""))
+      yield(Candidate("date", seg.start, seg._end, os.date("%d/%m/%Y"), ""))
+      yield(Candidate("date", seg.start, seg._end, os.date("%d-%m-%Y"), ""))
+      yield(Candidate("date", seg.start, seg._end, os.date("%d-%m"), ""))
+      yield(Candidate("date", seg.start, seg._end, os.date("%d日%m月%Y年"), ""))
+      yield(Candidate("date", seg.start, seg._end, os.date("%d-%m-%Y"), ""))
+
    end
    if (input == "time") then
       --- Candidate(type, start, end, text, comment)
