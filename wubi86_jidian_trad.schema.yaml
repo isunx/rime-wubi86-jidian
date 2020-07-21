@@ -54,9 +54,9 @@ engine:
 
 speller:
   # 如果想要开启自动造词功能，把下面三项都注释掉，在前面添加 # 这个符号即可
-  max_code_length: 4                    # 四码上屏
-  auto_select: true                     # 自动上屏
-  auto_select_unique_candidate: true    # 无重码自动上屏
+#  max_code_length: 4                    # 四码上屏
+#  auto_select: true                     # 自动上屏
+#  auto_select_unique_candidate: true    # 无重码自动上屏
 
 translator:
   dictionary: wubi86_jidian             # 翻译器将调取此字典文件
